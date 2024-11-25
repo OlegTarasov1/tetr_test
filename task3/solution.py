@@ -34,9 +34,3 @@ def appearance(intervals: dict[str, list[int]]) -> int:
 
     return total_time
 
-a = {'lesson': [1594692000, 1594695600],
-             'pupil': [1594692033, 1594696347],
-             'tutor': [1594692017, 1594692066, 1594692068, 1594696341]}
-print(appearance(a))
-
-
