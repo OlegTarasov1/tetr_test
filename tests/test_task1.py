@@ -1,8 +1,8 @@
 import pytest
-from task1.solution import check_annotation
+from task1.solution import strict
 
 
-@check_annotation
+@strict
 def check_f(a: str, b: int, c: list, *args: int, **kwargs: int):
     return True
 

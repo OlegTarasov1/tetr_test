@@ -1,4 +1,4 @@
-from task3.solution import appearance
+from task3.solution import attendance
 import pytest
 
 
@@ -17,4 +17,4 @@ import pytest
         ]
 )
 def test_task3(data: dict[list], res: int):
-    assert appearance(data) == res
+    assert attendance(data) == res

@@ -1,4 +1,4 @@
-def check_annotation(f):
+def strict(f):
     def wrapper(*args, **kwargs):
         annotations = f.__annotations__
 

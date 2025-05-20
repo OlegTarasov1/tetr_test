@@ -9,7 +9,7 @@ def run():
     base_url = 'https://ru.wikipedia.org'
     url = 'https://ru.wikipedia.org/wiki/Категория:Животные_по_алфавиту'
 
-    RUS = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЭЮЯ'
+    RUS = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЭЮЯ-'
     result = {}
     final = False
 
@@ -36,7 +36,7 @@ def run():
         url = next_page
 
 
-    with open('task2/beasts.csv', 'w', encoding = 'utf-8') as file:
+    with open('beasts.csv', 'w', encoding = 'utf-8') as file:
         writer = csv.writer(file)
         for i, value in result.items():
             writer.writerow([i, value])

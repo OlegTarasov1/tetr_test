@@ -1,4 +1,4 @@
-def appearance(intervals: dict[str, list[int]]) -> int:
+def attendance(intervals: dict[str, list[int]]) -> int:
     start, finish = intervals['lesson']
 
     starts, finishes = [], []

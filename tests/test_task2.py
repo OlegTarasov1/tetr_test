@@ -4,4 +4,4 @@ from task2.solution import run
 
 def test_task2():
     run()
-    assert os.path.exists('task2/beasts.csv') == True
+    assert os.path.exists('beasts.csv') == True
