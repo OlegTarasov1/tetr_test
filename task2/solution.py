@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import lxml
 import csv
+from pathlib import Path
 
 def run():
 
@@ -35,8 +36,8 @@ def run():
         next_page = base_url + id_with_li.find('a', string = 'Следующая страница')['href']
         url = next_page
 
-
-    with open('beasts.csv', 'w', encoding = 'utf-8') as file:
+    file_path = Path(__file__).resolve().parent / "beasts.csv"
+    with open(file_path, 'w', encoding = 'utf-8') as file:
         writer = csv.writer(file)
         for i, value in result.items():
             writer.writerow([i, value])

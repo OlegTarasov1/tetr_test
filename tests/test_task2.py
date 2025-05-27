@@ -1,7 +1,9 @@
 import pytest
 import os
-from task2.solution import run
+from task2 import solution as sol
+from pathlib import Path
 
 def test_task2():
-    run()
-    assert os.path.exists('beasts.csv') == True
+    file_path = Path(sol.__file__).parent / 'beasts.csv'
+    sol.run()
+    assert os.path.exists(file_path) == True
